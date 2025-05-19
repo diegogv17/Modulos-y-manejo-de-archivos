@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var fs_1 = require("fs");
+var helpers_1 = require("./helpers");
+var archivo = (0, fs_1.readFileSync)('./notas.txt', 'utf-8');
+console.log("Promedio simple:", (0, helpers_1.promedio)(archivo));
+var resultado = (0, helpers_1.promedioMejorado)(archivo);
+console.log("Promedio mejorado:", resultado.promedio);
+console.log("Estudiantes:", resultado.estudiantes);
+console.log("Cantidad:", resultado.cantidadEstudiantes);
